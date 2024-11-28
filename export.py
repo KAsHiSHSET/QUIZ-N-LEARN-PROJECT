@@ -2,6 +2,15 @@ from docx import Document
 import io
 
 def export_to_doc(mcqs):
+    """
+    Export MCQs to a Word document.
+
+    Parameters:
+        mcqs (list): A list of MCQs with questions, choices, and answers.
+
+    Returns:
+        io.BytesIO: A buffer containing the Word document.
+    """
     doc = Document()
     for idx, mcq in enumerate(mcqs, 1):
         doc.add_heading(f"Question {idx}: {mcq['question']}", level=2)

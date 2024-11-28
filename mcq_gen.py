@@ -46,7 +46,7 @@ iface = gr.Interface(
     fn=generate_mcqs,  # Function to call when interacting with the Gradio interface
     inputs="text",  # Input type (text box)
     outputs="text",  # Output type (text area for displaying questions)
-    title="MCQ Generator",  # Title for the web interface
+    title="Quiz-N-learn",  # Title for the web interface
     description="Enter a topic to generate multiple-choice questions."  # Description for users
 )
 
