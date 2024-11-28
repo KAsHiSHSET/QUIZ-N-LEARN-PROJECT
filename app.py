@@ -6,7 +6,7 @@ from utils import extract_text_from_pdf
 def display_mcq(mcqs):
     st.title("Multiple Choice Questions")
 
-    if 'user_answers' not in st.session_state or len(st.session_state.user_answers) != len(mcqs):
+    if 'user_answers' not in st.session_state:
         st.session_state.user_answers = [None] * len(mcqs)
 
     if 'submitted' not in st.session_state:
